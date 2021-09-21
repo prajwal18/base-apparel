@@ -1,0 +1,210 @@
+:root{
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --dark-grayish-red: hsl(0, 6%, 24%);
+
+    --white-red : linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --red-red : linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+    max-width: 1440px;
+    min-width: 350px;
+
+    background: var(--white-red);
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--dark-grayish-red);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    line-height: 1.2;
+}
+h1 span{ font-weight: 300; color: var(--desaturated-red);}
+
+
+
+/* -------------------------- Main ----------------------------- */
+main{
+    display: flex;
+    min-height: 100vh;
+}
+
+.left{
+    background-image: url('../images/bg-pattern-desktop.svg');
+	background-size: cover;
+	background-position: center center;
+	padding: 0 40px 40px;
+	width: 60%;
+}
+
+.right{
+    width: 40%;
+}
+
+
+
+
+/* --------------------------- Div inner container ---------------------- */
+main div.inner-container{
+    max-width: 450px;
+    margin: auto;
+}
+main div.inner-container div.logo {
+    width: 200px;
+    margin-top: 60px;
+}
+
+main div.inner-container img.bg-mobile { display: none; }
+
+
+
+    /*---------------- Div Info ------------- */
+main div.inner-container div.info {
+    margin-top: 110px;
+}
+
+main div.inner-container div.info p {
+    margin-top: 1em;
+    color: var(--desaturated-red);
+    line-height: 1.5;
+}
+
+
+    /* ---------------- Div Submit Email ---------------- */
+main div.inner-container div.submit-email {
+    margin-top: 2em;
+    position: relative;
+}
+
+        /* ------ Input ------ */
+input {
+	background-color: transparent;
+	border: 1px solid var(--desaturated-red);
+	border-radius: 50px;
+	font-size: 16px;
+	padding: 15px 30px;
+	height: 55px;
+	width: 100%;
+}
+input:focus {
+	border-width: 2px;
+	box-shadow: 0px 0px 10px hsla(0, 36%, 70%, 0.5);
+	outline: none;
+}
+
+input::placeholder{
+    color: var(--desaturated-red);
+}
+
+img.error-pic {
+    position: absolute;
+    width: 25px;
+    top: 15px; right: 90px;
+    display: none;
+}
+
+
+        /* ------ Button ------ */
+button{
+    width: 80px;
+    height: 55px;
+    position: absolute;
+    top:0;
+    right: 0;
+    border: none;
+    border-radius: 50px;
+    background: var(--red-red);
+    box-shadow: 2px 5px 10px hsla(0, 36%, 70%, 0.5);
+    cursor: pointer;
+}
+button:hover {
+    background: hsl(0, 80%, 86%);
+    transform: scaleX(1.1)
+}
+
+
+small {
+    margin-top: 10px;
+    margin-left: 30px;
+    color: var(--soft-red);
+    display: none;
+}
+
+/* Form Invalid Input */
+form.error small{
+    display: block;
+}
+form.error img.error-pic {
+    display: inline;
+}
+form.error input {
+    border: 2px solid var(--soft-red);
+}
+
+
+
+/* Div Hero Image */
+main div.hero-image {
+    background-image: url('../images/hero-desktop.jpg');
+    background-position: center center;
+    background-size: cover;
+}
+
+
+/* Smaller screen */
+@media screen and (max-width: 650px) {
+    main div.left {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    main div.left div.inner-container > div{
+        padding: 0 30px 30px 30px;
+    }
+
+
+    main div.left div.inner-container div.logo{
+        margin: 0;
+    }
+    main div.left div.inner-container img.bg-mobile {
+        display: block;
+        width: 100%;
+    }
+    main div.left div.inner-container div.info{
+        margin-top: 70px;
+    }
+    main div.left div.inner-container div.submit-email {
+        margin: 0;
+    }
+    div.submit-email button{
+        top:0;
+        right: 30px;
+    }
+
+    main div.right.hero-image {
+        display: none;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+}
+
+
+
+
