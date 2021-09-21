@@ -174,7 +174,7 @@ main div.hero-image {
         text-align: center;
     }
     main div.left div.inner-container > div{
-        padding: 0 30px 30px 30px;
+        padding: 30px;
     }
 
 
@@ -186,10 +186,11 @@ main div.hero-image {
         width: 100%;
     }
     main div.left div.inner-container div.info{
-        margin-top: 70px;
+        margin-top: 40px;
     }
     main div.left div.inner-container div.submit-email {
         margin: 0;
+        padding-top: 0;
     }
     div.submit-email button{
         top:0;
